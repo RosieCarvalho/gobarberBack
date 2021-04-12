@@ -1,0 +1,32 @@
+Nessa aula você irá entender as três principais estratégias para conseguirmos manusear informações que estão no banco de dados.
+
+São elas:
+Driver nativo;
+Query builder;
+ORM (Object Relational Mapping).
+
+ORM
+   squelaze - javascript
+   typeORM - typescript
+    -> este usando aqui no projeto
+    -> yarn add typeorm pg
+    -> necessario o ormconfig.json com configrações
+    ->  para gerar arquivo de tabela: yarn typeorm migration:create -n CreateAgendamentos
+
+-->docker
+---> criando container : docker run --name curso-postgres -e POSTGRES_PASSWORD=curso -p 5434:5432 -d postgres
+--->docker ps : para ver qual id para ativar
+--->docker start [id ou nome do docker]
+
+--> migration
+--> criar:  yarn typeorm migration:create -n CreateAgendamentos
+-->vai realizar aquilo que o git fa,deixar os bancos sincronizados
+-->pagar executar: yarn typeorm migration:run
+--> desfazer o que fez: yarn typeorm migration:revert
+-->necessario no ormconfig
+
+    "entities": [
+        "./src/models/*.ts"
+      ],
+--> necessario : yarn add reflect-metadata
+--> sempre a já tiver compartilhado com outros, é melhor criar outra migrition para fazer a alteração

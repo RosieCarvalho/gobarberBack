@@ -1,0 +1,27 @@
+-> yarn init -y
+-> yarn add express
+-> yarn add typescript -D
+-> yarn tsc --init
+-> criar pasta src
+->mudar no tsconfig.json
+     "outDir": "./dist", 
+         --- demorar para buildar, então não precisa criar ela.(mas realiza essa modificação)
+         -- melhor instalar: yarn add ts-node-dev -D                     
+    "rootDir": "./src",   
+->instalar arquivo de tipos da biblioteca
+    yarn add @types/[nome da lib]
+
+-> para conseguir rodar o projeto
+    yarn tsc --para ele conversar o type em javascript
+
+-> roda apontando para o aarquivo js gerado
+    node src/server.js
+    para facilitar: 
+    modificar no pacakge.json
+    "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+  },
+
+  -> para start
+        yarn dev:server

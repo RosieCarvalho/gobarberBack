@@ -1,0 +1,10 @@
+biblioteca para criptografia: bcryptjs
+yarn add bcryptjs
+yarn add -D @types/bcryptjs // sempre que instalar uma api, necessario para importar o typescript
+
+
+para gerar o token: jsonwebtoken
+
+para upload de arquivos: multer
+
+para habilitar cors: yarn add cors

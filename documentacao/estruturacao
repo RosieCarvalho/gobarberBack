@@ -1,0 +1,5 @@
+repositories : adiciona, delete, exibir... vai lidar com o banco
+service: onde fica a regra de negocio
+routes:
+-> recebe a requisição, chama outro arquivo, devolve a resposta
+-> tem a responsabilidade  de lidar com requisição e resposta( é como o controllers)
